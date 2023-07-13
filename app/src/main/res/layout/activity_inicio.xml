@@ -13,7 +13,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="330dp"
-        android:layout_height="307dp"
+        android:layout_height="344dp"
         android:layout_margin="30dp"
         android:background="@drawable/custom_edit"
         app:cardCornerRadius="30dp"
@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="307dp"
+            android:layout_height="373dp"
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"
             android:padding="24dp">
@@ -85,6 +85,16 @@
                 android:layout_gravity="center"
                 android:backgroundTint="@color/light_blue_900"
                 android:text="iniciar"
+                app:cornerRadius="20dp" />
+
+            <Button
+                android:id="@+id/buttonrecuperar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/light_blue_900"
+                android:minHeight="48dip"
+                android:text="olvide mi contraseña"
                 app:cornerRadius="20dp" />
 
 
