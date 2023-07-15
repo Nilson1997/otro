@@ -24,8 +24,9 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Inicio extends AppCompatActivity {
+
     private EditText etu, etc;
-    private Button inicio;
+    private Button inicio, recuperar;
     LoginApiService loginApiService;
     Retrofit retrofit;
     Button boton;
@@ -40,6 +41,10 @@ public class Inicio extends AppCompatActivity {
         boton= findViewById(R.id.buttoniniciar);
         EditText passwordEditText = findViewById(R.id.edtcontraseña);
         CheckBox showPasswordCheckbox = findViewById(R.id.checkBox);
+
+        recuperar= (Button) findViewById(R.id.buttonrecuperar);
+
+        getRecuperar();
 
         showPasswordCheckbox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -94,6 +99,17 @@ public class Inicio extends AppCompatActivity {
 
              }
          });
+    }
+
+    private void getRecuperar() {
+        recuperar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(Inicio.this, RecuperarActivity.class);
+                startActivity(i);
+
+            }
+        });
     }
    /* public  void incio(View v){
         loginApiService=retrofit.create(LoginApiService.class);
